@@ -1,34 +1,133 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<style>
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+         
+        
+  body {
+            font-family: "Lato", sans-serif;
+        }
 
-li {
-  float: middle;
-}
+        .sidenav {
+            display: none;
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 60px;
+        }
 
-li a {
-  display: block;
-  padding: 8px;
-  background-color:black;
-}
-</style>
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+        
+    </style>
 </head>
+
 <body>
 
-<ul>
-  <li><a href="index.html"> Home</a></li>
-  <li><a href="profile.html">News</a></li>
-  <li><a href="faq.html">Contact</a></li>
-  <li><a href="dashboard.html">About</a></li>
-</ul>
-<h1>hello world</h1>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="https://hz.nl/over-de-hz/regelingen-documenten-1/onderwijs-en-examenregelingen" target="_blank"
+            rel="noopener noreferrer">Onderwijs-en-examenregelingen</a>."></a>
+        <a href="https://apps.hz.nl/angular/studievoortgang/studiestatus" target="_blank"
+            rel="noopener noreferrer">Studievoortgang</a>
+        <a href="https://learn.hz.nl/" target="_blank" rel="noopener noreferrer">Learn HZ</a>
+        <a href="https://hz.nl/uploads/documents/Regelingen/OERS/2019-2020/2020-2021-ICT-Implementation-Regulations-CER-HZ-DEF1.0.pdf"
+            target="_blank" rel="noopener noreferrer">Uitvoersregeling</a>
+        <a href="https://github.com/" target="_blank" rel="noopener noreferrer">Github</a>
+    </div>
+
+
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.display = "block";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.display = "none";
+        }
+    </script>
 
 </body>
+
+</html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul>
+        <li><a href="index.html"> Home</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+    </ul>
+    <h1>hello world</h1>
+
+</body>
+
 </html>
