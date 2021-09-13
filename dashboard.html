@@ -3,43 +3,63 @@
 
 <head>
     <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
             font-family: "Lato", sans-serif;
         }
 
-
-
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
-        }
-
-        li {
-            float: left;
-        }
-
-        li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        li a:hover {
+        .sidenav {
+            display: none;
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
             background-color: #111;
+            overflow-x: hidden;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
         }
     </style>
 </head>
 
 <body>
+    
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <img src="https://vmh-hbo.nl/wp-content/uploads/2018/06/hz-logo.jpg" width="180" height="150">
         <a href="https://hz.nl/over-de-hz/regelingen-documenten-1/onderwijs-en-examenregelingen" target="_blank"
             rel="noopener noreferrer">Onderwijs-en-examenregelingen</a>."></a>
         <a href="https://apps.hz.nl/angular/studievoortgang/studiestatus" target="_blank"
@@ -48,6 +68,9 @@
         <a href="https://hz.nl/uploads/documents/Regelingen/OERS/2019-2020/2020-2021-ICT-Implementation-Regulations-CER-HZ-DEF1.0.pdf"
             target="_blank" rel="noopener noreferrer">Uitvoersregeling</a>
         <a href="https://github.com/" target="_blank" rel="noopener noreferrer">Github</a>
+        <a href="https://teams.microsoft.com/l/team/19%3a827654897ab746089c081f24aff1c984%40thread.skype/conversations?groupId=337e8cca-f67d-4132-9fa9-b0c761bbeb94&tenantId=4c16deb3-342d-4fca-bcd5-b1429308034c"
+            target="_blank" rel="noopener noreferrer">Teams HBO-ICT</a>
+
     </div>
 
 
@@ -62,19 +85,73 @@
             document.getElementById("mySidenav").style.display = "none";
         }
     </script>
-    <html>
+
+    <nav>
+        <ul>
+            <li><a href="index.html"> Home</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <div class="grid">
+            <header>
+                Studievoortgang
+            </header>
+
+            <aside class="sidebar-left">
+                Hello HZ
+            </aside>
+
+            <table>
+                <tr>
+                    <th>Toetsen</th>
+                    <th>Cijfers</th>
+                    <th>Studiepunten</th>
+                </tr>
+                <tr>
+                    <td>Computer science basics </td>
+                </tr>
+                <tr>
+                    <td>Object-oriented programming</td>
+                </tr>
+                <tr>
+                    <td>Program- and Career Orientation</td>
+
+                </tr>
+                <tr>
+                    <td>Personal Professional Development Exploration </td>
+
+                </tr>
+                <tr>
+                    <td>Programming basics</td>
+                </tr>
 
 
+            </table>
+
+
+
+            <aside class="sidebar-right">
+                Hello
+            </aside>
+
+
+
+
+
+
+        </div>
+        <footer>
+            This is the bottom of my page
+        </footer>
+
+    </main>
 </body>
 
-</html>
-
-<ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="profile.html">Profile</a></li>
-    <li><a href="faq.html">FAQ</a></li>
-    <li><a href="dashboard.html">Dashboard</a></li>
-</ul>
-<p>Go to the <a href="index.html" target="_blank" rel="noopener noreferrer">Home page</a>.</p>
 
 </html>
